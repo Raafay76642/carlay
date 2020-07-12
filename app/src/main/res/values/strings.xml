@@ -3,4 +3,10 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Bookings</string>
     <string name="title_notifications">Notifications</string>
+    <array name="Type">
+        <item>Car</item>
+        <item>Bike</item>
+        <item>Mini Truck</item>
+        <item>Truck</item>
+    </array>
 </resources>
