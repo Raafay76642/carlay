@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -13,13 +14,18 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 public class MainActivity extends AppCompatActivity {
-
+    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);
-
+        //for checking either the user allready logged in or not
+        mAuth = FirebaseAuth.getInstance();
+//        if( mAuth.getInstance().getCurrentUser()==null){
+//            Intent intent = new Intent(MainActivity.this, Signup.class);
+//            startActivity(intent);
+//        }
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
@@ -32,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
     }
     public void OpenProfile(View view){
         Intent intent=new Intent(this, Profile.class);
+        startActivity(intent);};
+
+    public void OpenVehicalinfo(View view){
+        Intent intent=new Intent(this, VehicalInfo.class);
         startActivity(intent);};
 
 }

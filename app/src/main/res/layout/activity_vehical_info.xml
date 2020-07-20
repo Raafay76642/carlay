@@ -10,9 +10,16 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:src="@drawable/vehical" />
+        android:layout_height="match_parent"
+        android:src="@drawable/vehical"
+        android:layout_weight="2"/>
 
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -60,23 +67,28 @@
             android:textColor="@color/colorPrimary"
             android:textStyle="bold" />
         <EditText
+            android:id="@+id/VehicalNo"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorPrimary" />
     </LinearLayout>
+    </LinearLayout>
 
     <TextView
+        android:layout_weight="2"
         android:layout_marginTop="30dp"
+        android:layout_marginBottom="50dp"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="match_parent"
         android:layout_marginLeft="60dp"
         android:layout_marginRight="60dp"
         android:background="@drawable/buttonc"
         android:fontFamily="monospace"
         android:gravity="center"
-        android:text="Save"
+        android:text="Update"
         android:textAllCaps="true"
         android:textColor="@android:color/background_light"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:onClick="UpdateData"/>
 </LinearLayout>
