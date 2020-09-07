@@ -11,6 +11,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -25,6 +26,7 @@ public class VehicalInfo extends AppCompatActivity {
     private ProgressDialog mProgressBarsaving;
     DatabaseReference databaseProfileRef;
     FirebaseDatabase database;
+    FirebaseAuth firebaseAuth;
     String id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +39,8 @@ public class VehicalInfo extends AppCompatActivity {
         //database
         database = FirebaseDatabase.getInstance();
         databaseProfileRef = database.getReference("Users");
-        id = "U12mu2QQAeUP6tx8XxLbTsW3rKX2";
+        firebaseAuth= FirebaseAuth.getInstance();
+        id =firebaseAuth.getCurrentUser().getUid();
 
 
         getdata();

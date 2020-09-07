@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.smartparkingsystem">
 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +16,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
         android:theme="@style/AppTheme">
-        <activity android:name=".About"></activity>
+        <activity android:name=".BookingFormWorkshop"></activity>
+        <activity android:name=".BookingFormServiceStation" />
+        <activity android:name=".BookingForm" />
+        <activity android:name=".CustomerSupport" />
+        <activity android:name=".DropLocation" />
+        <activity android:name=".ParkingPin" />
+        <activity android:name=".Navigation" />
+        <activity android:name=".NearByWorkshop" />
+        <activity android:name=".NearByServiceStation" />
+        <activity android:name=".BookingMain" />
+        <activity android:name=".NearBy" />
+        <activity android:name=".About" />
         <activity android:name=".VehicalInfo" />
         <activity android:name=".Profile" />
         <activity android:name=".VerifyCode" />

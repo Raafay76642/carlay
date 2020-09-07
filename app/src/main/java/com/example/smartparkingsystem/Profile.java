@@ -26,6 +26,7 @@ public class Profile extends AppCompatActivity {
     DatabaseReference databaseProfileRef;
     FirebaseDatabase database;
     String id;
+    FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +37,9 @@ public class Profile extends AppCompatActivity {
         mProgressBarsaving = new ProgressDialog(Profile.this);
         //database
         database =FirebaseDatabase.getInstance();
+        firebaseAuth=FirebaseAuth.getInstance();
         databaseProfileRef = database.getReference("Users");
-        id = "U12mu2QQAeUP6tx8XxLbTsW3rKX2";
+        id =firebaseAuth.getCurrentUser().getUid();
         //For gatting user data
         getdata();
         //Getting Inputs from Xml

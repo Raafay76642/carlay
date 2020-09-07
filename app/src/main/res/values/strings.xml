@@ -9,4 +9,12 @@
         <item>Mini Truck</item>
         <item>Truck</item>
     </array>
+
+
+    <string name="user_location_permission_explanation">This app needs location permissions to show its functionality.</string>
+    <string name="user_location_permission_not_granted">You didn\'t grant location permissions.</string>
+    <string name="location_picker_dropped_marker_snippet_no_results">location_picker_dropped_marker_snippet_no_results</string>
+
+    <string name="access_token">pk.eyJ1IjoibXVkYXNzYXI3NjY0MiIsImEiOiJjank0NW1yOHQwNTRrM2NsYTZ4emNnajVkIn0.KkS5B-1rQ0aEeSl4P6bR1g</string>
+
 </resources>
